@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burning Ship Fractal Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/mosaic/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-4xl">The Burning Ship Fractal</h1>
+
+        
+        
+        <div class="canvas-container">
+            <canvas id="fractalCanvas"></canvas>
+            <div id="loadingIndicator" class="loader"></div>
+            <div id="messageBox" class="message-box"></div>
+        </div>
+
+        <div class="controls" id="burningShipControls">
+            <button id="burningShipZoomInBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+                Zoom In
+            </button>
+            <button id="burningShipZoomOutBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+                Zoom Out
+            </button>
+            <button id="burningShipHighResBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+                High-Res Mode
+            </button>
+            <button id="burningShipResetBtn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+                Reset View
+            </button>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-4 justify-center items-center" id="burningShipSliders">
+            <div class="slider-group">
+                <label for="burningShipZoomSpeedSlider" class="text-sm font-semibold mb-2">Zoom Speed</label>
+                <input type="range" id="burningShipZoomSpeedSlider" min="1" max="100" value="20" class="w-48">
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>About the Burning Ship Fractal</h3>
+            <p>The Burning Ship fractal is created by iterating the function $z_{n+1} = (|\text{Re}(z_n)| + i|\text{Im}(z_n)|)^2 + c$ in the complex plane. Unlike the Mandelbrot Set, the absolute values of the real and imaginary parts of $z$ are taken at each step. This subtle change in the formula drastically alters the geometry of the resulting fractal, creating a shape that resembles a ship with two burning masts.</p>
+            <p>Discovered by Michael Michelitsch and Otto E. Rössler in 1992, the Burning Ship fractal is a stunning example of how small changes in a simple mathematical formula can lead to an entirely new and complex world of patterns. It is an ideal subject for exploration and visualization.</p>
+        </div>
+    </div>
+
+    <script src="/mosaic/main.js"></script>
+</body>
+</html>

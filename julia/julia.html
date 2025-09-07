@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Set Viewer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/julia/style.css">
+</head>
+<body>
+ 
+    <h1 class="text-3xl font-bold mb-4">Julia Set Viewer</h1>
+
+    <canvas id="juliaCanvas"></canvas>
+
+    <div class="controls">
+        <button id="zoomInBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+            Zoom In
+        </button>
+        <button id="zoomOutBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+            Zoom Out
+        </button>
+        <button id="highResBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+            High-Res Mode
+        </button>
+        <button id="resetBtn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105">
+            Reset View
+        </button>
+        <div id="loadingIndicator" class="loader"></div>
+    </div>
+    
+    <div class="mt-4 flex flex-wrap gap-4 justify-center items-center">
+        <div class="slider-group">
+            <label for="zoomSpeedSlider" class="text-sm font-semibold mb-2">Zoom Speed</label>
+            <input type="range" id="zoomSpeedSlider" min="1" max="100" value="20" class="w-48">
+        </div>
+        
+        <div class="slider-group">
+            <label for="cRealSlider" class="text-sm font-semibold mb-2">C Real: <span id="cRealValue"></span></label>
+            <input type="range" id="cRealSlider" min="-1" max="1" step="0.0001" value="-0.7" class="w-48">
+        </div>
+        
+        <div class="slider-group">
+            <label for="cImagSlider" class="text-sm font-semibold mb-2">C Imaginary: <span id="cImagValue"></span></label>
+            <input type="range" id="cImagSlider" min="-1" max="1" step="0.0001" value="0.27015" class="w-48">
+        </div>
+    </div>
+    <p class="text-sm text-gray-400 mt-2">
+        Adjust the sliders to change the parameters of the Julia Set. Avoid dragging sliders for best performance. (only click)
+
+    <div id="messageBox" class="message-box mt-4">
+        Click and drag to pan, use mouse wheel or buttons to zoom.
+    </div>
+    
+
+    
+
+    
+    <script type="module" src="/julia/main.js"></script>
+</body>
+</html>
