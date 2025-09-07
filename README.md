@@ -10,6 +10,8 @@ This is a simple, web application that allows you to explore two classic fractal
 -   **Mandelbrot Set Viewer:** Explore the famous Mandelbrot fractal.
     
 -   **Julia Set Viewer:** Explore a specific Julia Set.
+
+-   **Burning Ship Fractal Viewer:** View the intresting burning ship fractal.
     
 -   **Dynamic Content:** The selected fractal viewer is loaded and displayed on the same page.
     
