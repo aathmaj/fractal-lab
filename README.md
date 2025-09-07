@@ -35,4 +35,4 @@ This is a simple, web application that allows you to explore two classic fractal
     
 -   **JavaScript (ES6):** To handle the button click events and dynamically load the fractal content.
 
--   **Gemini**:** Basic bug fixes and help on mental roadblocks faced by me.**
+-   **Gemini**: Basic bug fixes and help on mental roadblocks faced by me.
