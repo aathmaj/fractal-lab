@@ -14,7 +14,7 @@ window.onload = function () {
   let isMouseOverCanvas = false;
 
   // Burning Ship state
-  let burningShipZoom = 0.35;
+  let burningShipZoom = 0.2;
   let burningShipPanX = -0.5;
   let burningShipPanY = -0.5;
 
@@ -216,4 +216,5 @@ window.onload = function () {
 
   init();
 };
+
 
